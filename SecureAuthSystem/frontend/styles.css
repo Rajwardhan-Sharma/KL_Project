@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 50px;
+}
+
+.container h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Alert Boxes */
+.alert {
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+.alert.hidden { display: none; }
+.alert.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.dashboard-header button {
+    width: auto;
+    padding: 8px 15px;
+    background: #e74c3c;
+}
+.dashboard-header button:hover {
+    background: #c0392b;
+}
+
+/* Admin Panel specific */
+.admin-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+.requests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.request-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.request-card p {
+    margin: 5px 0;
+    word-break: break-all;
+}
+.request-card strong {
+    color: #555;
+}
+.actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.actions button { width: 120px; }
+.approve-btn { background: #2ecc71; }
+.approve-btn:hover { background: #27ae60; }
+.reject-btn { background: #e74c3c; }
+.reject-btn:hover { background: #c0392b; }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-header">
+        <h1>Welcome to your Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="container" style="max-width: 800px; margin-top: 40px;">
+        <h2>Login Successful!</h2>
+        <p>You are viewing your account because your device is approved and recognized.</p>
+        <br>
+        <p>This is a secure page accessible only with a valid JWT token.</p>
+    </div>
+
+    <!--
+        Comments:
+        - The dashboard simply ensures that local token state exists.
+        - Actual protected data calls would attach "Bearer ${token}" to headers if we expanded it.
+    -->
+    <script>
+        const token = localStorage.getItem('token');
+
+        // Block unauthenticated visitors immediately
+        if (!token) {
+            window.location.href = 'login.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>
